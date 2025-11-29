@@ -1,0 +1,49 @@
+﻿<Window x:Class="halozatvezerles.InputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:halozatvezerles"
+        mc:Ignorable="d"
+        Title="Adatbekérés"
+        Height="469" Width="420"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="Height"
+        ResizeMode="NoResize">
+
+    <StackPanel Margin="16">
+        <!-- Cím -->
+        <TextBlock Text="Adatbekérés"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <!-- Terem száma -->
+        <Label Content="Terem száma:" Target="{Binding ElementName=RoomBox}"  FontSize="16"/>
+        <TextBox x:Name="RoomBox" Margin="0,0,0,10" FontSize="16" Text="202"/>
+
+        <!-- Sorok száma -->
+        <Label Content="Sorok száma:" Target="{Binding ElementName=RowsBox}"  FontSize="16"/>
+        <TextBox x:Name="RowsBox" Margin="0,0,0,10" FontSize="16" Text="5"/>
+
+        <!-- Oszlopok száma -->
+        <Label Content="Oszlopok száma:" Target="{Binding ElementName=ColsBox}"  FontSize="16"/>
+        <TextBox x:Name="ColsBox" Margin="0,0,0,10" FontSize="16" Text="3"/>
+
+        <!-- Rendszergazda felhasználó -->
+        <Label Content="Rendszergazda felhasználó:" Target="{Binding ElementName=AdminUserBox}"  FontSize="16"/>
+        <TextBox x:Name="AdminUserBox" Margin="0,0,0,10" FontSize="16" Text="kerouser"/>
+
+        <!-- Rendszergazda jelszó -->
+        <Label Content="Rendszergazda jelszó:" Target="{Binding ElementName=AdminPassBox}"  FontSize="16"/>
+        <PasswordBox x:Name="AdminPassBox" Margin="0,0,0,20" FontSize="16"/>
+
+        <!-- Tovább gomb -->
+        <Button Content="OK"
+                Width="100" Height="30"
+                HorizontalAlignment="Center"
+                 FontSize="16"
+                Click="NextButton_Click"/>
+    </StackPanel>
+</Window>
